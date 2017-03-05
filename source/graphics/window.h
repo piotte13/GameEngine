@@ -44,10 +44,6 @@ namespace gameEngine{
 			friend static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
 			friend static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
 		};
-
-
-
-
 	//end of namespaces
 	}
 }

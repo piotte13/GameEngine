@@ -79,7 +79,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -120,17 +120,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\graphics\Shader.cpp" />
     <ClCompile Include="source\graphics\window.cpp" />
+    <ClCompile Include="source\maths\mat4.cpp" />
     <ClCompile Include="source\maths\vec2.cpp" />
     <ClCompile Include="source\maths\vec3.cpp" />
     <ClCompile Include="source\maths\vec4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\graphics\Shader.h" />
     <ClInclude Include="source\graphics\window.h" />
+    <ClInclude Include="source\maths\mat4.h" />
     <ClInclude Include="source\maths\maths.h" />
+    <ClInclude Include="source\maths\maths_func.h" />
     <ClInclude Include="source\maths\vec2.h" />
     <ClInclude Include="source\maths\vec3.h" />
     <ClInclude Include="source\maths\vec4.h" />
+    <ClInclude Include="source\utils\fileutils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\shaders\basic.frag" />
+    <None Include="source\shaders\basic.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
